@@ -1,8 +1,9 @@
 {
-  "name": "scroll-timeline-polyfill",
-  "version": "1.0.0",
+  "name": "@irbnb/scroll-timeline-polyfill",
+  "version": "1.0.5",
   "description": "A polyfill for scroll-driven animations on the web via ScrollTimeline",
   "type": "module",
+  "module": "dist/scroll-timeline-es.js",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
@@ -32,6 +33,9 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/flackr/scroll-timeline/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.d.musta.ch"
   },
   "homepage": "https://github.com/flackr/scroll-timeline#readme",
   "devDependencies": {
