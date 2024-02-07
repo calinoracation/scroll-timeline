@@ -1,6 +1,6 @@
 {
   "name": "@irbnb/scroll-timeline-polyfill",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A polyfill for scroll-driven animations on the web via ScrollTimeline",
   "type": "module",
   "module": "dist/scroll-timeline-es.js",
