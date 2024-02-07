@@ -15,7 +15,7 @@
 import {
   ScrollTimeline,
   ViewTimeline,
-} from "./scroll-timeline-base";
+} from "./scroll-timeline-base.js";
 import {
   animate,
   elementGetAnimations,
@@ -23,18 +23,20 @@ import {
   ProxyAnimation
 } from "./proxy-animation.js";
 
-import { initCSSPolyfill } from "./scroll-timeline-css"
+import { initCSSPolyfill } from "./scroll-timeline-css.js"
 
-function initPolyfill() {
+export { ScrollTimeline, ViewTimeline }
+
+function initPolyfill(): void {
   // initCSSPolyfill returns true iff the host browser supports SDA
   if (initCSSPolyfill()) {
     return;
   }
 
-  if ([...document.styleSheets].filter((s) => s.href !== null).length) {
+  if ([ ...document.styleSheets ].filter((s) => s.href !== null).length) {
     console.warn(
       'Non-Inline StyleSheets detected: ScrollTimeline polyfill currently only' +
-        ' supports inline styles within style tags'
+      ' supports inline styles within style tags'
     );
   }
 
